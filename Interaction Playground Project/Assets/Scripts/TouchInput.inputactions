@@ -1,0 +1,94 @@
+{
+    "name": "TouchInput",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "208300bc-7d1a-4980-bc92-0ebab802ffde",
+            "actions": [
+                {
+                    "name": "FingerOne",
+                    "type": "PassThrough",
+                    "id": "7b17ebe8-4e0a-44fe-af5e-4a94c299fce0",
+                    "expectedControlType": "Touch",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FingerTwo",
+                    "type": "PassThrough",
+                    "id": "b93825d2-23f0-4fc9-acb8-6d80b55c0192",
+                    "expectedControlType": "Touch",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FingerThree",
+                    "type": "PassThrough",
+                    "id": "1ac17e75-1fd2-4775-84c1-48fe0e4bbc73",
+                    "expectedControlType": "Touch",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FingerFour",
+                    "type": "PassThrough",
+                    "id": "203dd43d-de7a-4a99-a6e4-862b27e9b0e5",
+                    "expectedControlType": "Touch",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b7dec268-1afd-4d40-a31d-82c32918b8f8",
+                    "path": "<Touchscreen>/touch0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FingerOne",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ecefc422-abbd-4e95-be10-9393905faa4b",
+                    "path": "<Touchscreen>/touch1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FingerTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa79b222-a87c-4dda-8b85-df87633241ba",
+                    "path": "<Touchscreen>/touch2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FingerThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17dacf16-6c3d-4d40-af4b-8f13360a1e3b",
+                    "path": "<Touchscreen>/touch3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FingerFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
