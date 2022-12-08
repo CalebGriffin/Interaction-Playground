@@ -7,39 +7,39 @@
             "actions": [
                 {
                     "name": "FingerOne",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "7b17ebe8-4e0a-44fe-af5e-4a94c299fce0",
                     "expectedControlType": "Touch",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "FingerTwo",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "b93825d2-23f0-4fc9-acb8-6d80b55c0192",
                     "expectedControlType": "Touch",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "FingerThree",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "1ac17e75-1fd2-4775-84c1-48fe0e4bbc73",
                     "expectedControlType": "Touch",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "FingerFour",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "203dd43d-de7a-4a99-a6e4-862b27e9b0e5",
                     "expectedControlType": "Touch",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
