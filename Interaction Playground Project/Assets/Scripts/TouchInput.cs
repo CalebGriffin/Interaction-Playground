@@ -29,36 +29,72 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""FingerOne"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""7b17ebe8-4e0a-44fe-af5e-4a94c299fce0"",
-                    ""expectedControlType"": ""Touch"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FingerOnePos"",
+                    ""type"": ""Value"",
+                    ""id"": ""3d464f3e-d10c-4d10-b496-a1aabf8c5063"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""FingerTwo"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""b93825d2-23f0-4fc9-acb8-6d80b55c0192"",
-                    ""expectedControlType"": ""Touch"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FingerTwoPos"",
+                    ""type"": ""Value"",
+                    ""id"": ""f08b5a66-5537-453d-9cf5-370363900e14"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""FingerThree"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""1ac17e75-1fd2-4775-84c1-48fe0e4bbc73"",
-                    ""expectedControlType"": ""Touch"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FingerThreePos"",
+                    ""type"": ""Value"",
+                    ""id"": ""725d415d-8485-4854-a68c-3db31de76a4c"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""FingerFour"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""203dd43d-de7a-4a99-a6e4-862b27e9b0e5"",
-                    ""expectedControlType"": ""Touch"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FingerFourPos"",
+                    ""type"": ""Value"",
+                    ""id"": ""6b7ef3f4-2c2a-4ffc-8574-6bbef83470e2"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -68,7 +104,7 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b7dec268-1afd-4d40-a31d-82c32918b8f8"",
-                    ""path"": ""<Touchscreen>/touch0"",
+                    ""path"": ""<Touchscreen>/touch0/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -79,7 +115,7 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ecefc422-abbd-4e95-be10-9393905faa4b"",
-                    ""path"": ""<Touchscreen>/touch1"",
+                    ""path"": ""<Touchscreen>/touch1/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -90,7 +126,7 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""fa79b222-a87c-4dda-8b85-df87633241ba"",
-                    ""path"": ""<Touchscreen>/touch2"",
+                    ""path"": ""<Touchscreen>/touch2/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -101,11 +137,55 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""17dacf16-6c3d-4d40-af4b-8f13360a1e3b"",
-                    ""path"": ""<Touchscreen>/touch3"",
+                    ""path"": ""<Touchscreen>/touch3/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""FingerFour"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98ed7747-1af3-47e7-a40d-298b951ed622"",
+                    ""path"": ""<Touchscreen>/touch0/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FingerOnePos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""99f43006-1127-4ad4-94b5-c04d752debbe"",
+                    ""path"": ""<Touchscreen>/touch1/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FingerTwoPos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""90e3b231-d4fd-41a2-b83f-68d10c36ec0b"",
+                    ""path"": ""<Touchscreen>/touch2/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FingerThreePos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6ce70ba-3ac3-4b73-8c36-daa2765b4f99"",
+                    ""path"": ""<Touchscreen>/touch3/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FingerFourPos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -117,9 +197,13 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
         // Touch
         m_Touch = asset.FindActionMap("Touch", throwIfNotFound: true);
         m_Touch_FingerOne = m_Touch.FindAction("FingerOne", throwIfNotFound: true);
+        m_Touch_FingerOnePos = m_Touch.FindAction("FingerOnePos", throwIfNotFound: true);
         m_Touch_FingerTwo = m_Touch.FindAction("FingerTwo", throwIfNotFound: true);
+        m_Touch_FingerTwoPos = m_Touch.FindAction("FingerTwoPos", throwIfNotFound: true);
         m_Touch_FingerThree = m_Touch.FindAction("FingerThree", throwIfNotFound: true);
+        m_Touch_FingerThreePos = m_Touch.FindAction("FingerThreePos", throwIfNotFound: true);
         m_Touch_FingerFour = m_Touch.FindAction("FingerFour", throwIfNotFound: true);
+        m_Touch_FingerFourPos = m_Touch.FindAction("FingerFourPos", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -180,17 +264,25 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Touch;
     private ITouchActions m_TouchActionsCallbackInterface;
     private readonly InputAction m_Touch_FingerOne;
+    private readonly InputAction m_Touch_FingerOnePos;
     private readonly InputAction m_Touch_FingerTwo;
+    private readonly InputAction m_Touch_FingerTwoPos;
     private readonly InputAction m_Touch_FingerThree;
+    private readonly InputAction m_Touch_FingerThreePos;
     private readonly InputAction m_Touch_FingerFour;
+    private readonly InputAction m_Touch_FingerFourPos;
     public struct TouchActions
     {
         private @TouchInput m_Wrapper;
         public TouchActions(@TouchInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @FingerOne => m_Wrapper.m_Touch_FingerOne;
+        public InputAction @FingerOnePos => m_Wrapper.m_Touch_FingerOnePos;
         public InputAction @FingerTwo => m_Wrapper.m_Touch_FingerTwo;
+        public InputAction @FingerTwoPos => m_Wrapper.m_Touch_FingerTwoPos;
         public InputAction @FingerThree => m_Wrapper.m_Touch_FingerThree;
+        public InputAction @FingerThreePos => m_Wrapper.m_Touch_FingerThreePos;
         public InputAction @FingerFour => m_Wrapper.m_Touch_FingerFour;
+        public InputAction @FingerFourPos => m_Wrapper.m_Touch_FingerFourPos;
         public InputActionMap Get() { return m_Wrapper.m_Touch; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -203,15 +295,27 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
                 @FingerOne.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerOne;
                 @FingerOne.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerOne;
                 @FingerOne.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerOne;
+                @FingerOnePos.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerOnePos;
+                @FingerOnePos.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerOnePos;
+                @FingerOnePos.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerOnePos;
                 @FingerTwo.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerTwo;
                 @FingerTwo.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerTwo;
                 @FingerTwo.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerTwo;
+                @FingerTwoPos.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerTwoPos;
+                @FingerTwoPos.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerTwoPos;
+                @FingerTwoPos.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerTwoPos;
                 @FingerThree.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerThree;
                 @FingerThree.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerThree;
                 @FingerThree.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerThree;
+                @FingerThreePos.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerThreePos;
+                @FingerThreePos.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerThreePos;
+                @FingerThreePos.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerThreePos;
                 @FingerFour.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerFour;
                 @FingerFour.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerFour;
                 @FingerFour.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerFour;
+                @FingerFourPos.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerFourPos;
+                @FingerFourPos.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerFourPos;
+                @FingerFourPos.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnFingerFourPos;
             }
             m_Wrapper.m_TouchActionsCallbackInterface = instance;
             if (instance != null)
@@ -219,15 +323,27 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
                 @FingerOne.started += instance.OnFingerOne;
                 @FingerOne.performed += instance.OnFingerOne;
                 @FingerOne.canceled += instance.OnFingerOne;
+                @FingerOnePos.started += instance.OnFingerOnePos;
+                @FingerOnePos.performed += instance.OnFingerOnePos;
+                @FingerOnePos.canceled += instance.OnFingerOnePos;
                 @FingerTwo.started += instance.OnFingerTwo;
                 @FingerTwo.performed += instance.OnFingerTwo;
                 @FingerTwo.canceled += instance.OnFingerTwo;
+                @FingerTwoPos.started += instance.OnFingerTwoPos;
+                @FingerTwoPos.performed += instance.OnFingerTwoPos;
+                @FingerTwoPos.canceled += instance.OnFingerTwoPos;
                 @FingerThree.started += instance.OnFingerThree;
                 @FingerThree.performed += instance.OnFingerThree;
                 @FingerThree.canceled += instance.OnFingerThree;
+                @FingerThreePos.started += instance.OnFingerThreePos;
+                @FingerThreePos.performed += instance.OnFingerThreePos;
+                @FingerThreePos.canceled += instance.OnFingerThreePos;
                 @FingerFour.started += instance.OnFingerFour;
                 @FingerFour.performed += instance.OnFingerFour;
                 @FingerFour.canceled += instance.OnFingerFour;
+                @FingerFourPos.started += instance.OnFingerFourPos;
+                @FingerFourPos.performed += instance.OnFingerFourPos;
+                @FingerFourPos.canceled += instance.OnFingerFourPos;
             }
         }
     }
@@ -235,8 +351,12 @@ public partial class @TouchInput : IInputActionCollection2, IDisposable
     public interface ITouchActions
     {
         void OnFingerOne(InputAction.CallbackContext context);
+        void OnFingerOnePos(InputAction.CallbackContext context);
         void OnFingerTwo(InputAction.CallbackContext context);
+        void OnFingerTwoPos(InputAction.CallbackContext context);
         void OnFingerThree(InputAction.CallbackContext context);
+        void OnFingerThreePos(InputAction.CallbackContext context);
         void OnFingerFour(InputAction.CallbackContext context);
+        void OnFingerFourPos(InputAction.CallbackContext context);
     }
 }
