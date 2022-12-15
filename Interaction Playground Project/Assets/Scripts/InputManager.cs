@@ -38,6 +38,8 @@ public class InputManager : MonoBehaviour
 
     #endregion
 
+    public static Vector3 AccelerometerValue { get; private set; }
+
     private TouchInput touchInput;
 
     void Awake()
@@ -57,11 +59,13 @@ public class InputManager : MonoBehaviour
     void OnEnable()
     {
         touchInput.Enable();
+        InputSystem.EnableDevice(AttitudeSensor.current);
     }
 
     void OnDisable()
     {
         touchInput.Disable();
+        InputSystem.DisableDevice(AttitudeSensor.current);
     }
 
     // Start is called before the first frame update
@@ -81,6 +85,11 @@ public class InputManager : MonoBehaviour
         touchInput.Touch.FingerTwoPos.performed += ctx => TouchMoved(1, ctx);
         touchInput.Touch.FingerThreePos.performed += ctx => TouchMoved(2, ctx);
         touchInput.Touch.FingerFourPos.performed += ctx => TouchMoved(3, ctx);
+    }
+
+    void Update()
+    {
+        AccelerometerValue = AttitudeSensor.current.attitude.ReadValue().eulerAngles;
     }
 
     void TouchStarted(int touchIndex, InputAction.CallbackContext ctx)
