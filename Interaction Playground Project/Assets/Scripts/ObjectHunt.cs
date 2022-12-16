@@ -13,6 +13,8 @@ public class ObjectHunt : MonoBehaviour
     float minDist = 0;
     float maxDist;
 
+    float shakeThreshold = 0.5f;
+
     bool isTouching = false;
     bool objectFound = false;
 
@@ -21,11 +23,18 @@ public class ObjectHunt : MonoBehaviour
     [SerializeField]
     GameObject trailPrefab;
 
+    [SerializeField]
+    GameObject objectPrefab;
+
     GameObject currentTrail;
 
     GameObject objectToFind;
 
+    [SerializeField]
     TextMeshProUGUI text;
+
+    [SerializeField]
+    TextMeshProUGUI debugText;
 
     void Awake()
     {
@@ -49,7 +58,7 @@ public class ObjectHunt : MonoBehaviour
     void TouchDown(InputAction.CallbackContext ctx)
     {
         isTouching = true;
-        if (text.text != "")
+        if (text.text == "Move your finger to find the object!")
             text.text = "";
         StartCoroutine(Vibrate());
     }
@@ -62,6 +71,7 @@ public class ObjectHunt : MonoBehaviour
 
     IEnumerator Vibrate()
     {
+        yield return new WaitUntil(() => objectFound == false);
         yield return new WaitForSeconds(CalculateWaitTime());
         Handheld.Vibrate();
         if (isTouching)
@@ -83,14 +93,22 @@ public class ObjectHunt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isTouching)
+        if (isTouching && !objectFound)
             UpdateTrailPos();
         else
             currentTrail = null;
 
         if (Vector3.Distance(CalculateFingerPos(), objectToFind.transform.position) < 0.5f)
         {
+            ObjectFound();
         }
+
+        if (InputManager.AccelerometerValue.sqrMagnitude > shakeThreshold && objectFound)
+        {
+            SpawnObject();
+        }
+
+        debugText.text = InputManager.AccelerometerValue.ToString() + " " + InputManager.AccelerometerValue.sqrMagnitude.ToString();
     }
 
     void UpdateTrailPos()
@@ -109,15 +127,23 @@ public class ObjectHunt : MonoBehaviour
 
     void ObjectFound()
     {
-        Destroy(objectToFind);
+        objectToFind.SendMessage("Found");
         text.text = "Shake to start again!";
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+        objectFound = true;
     }
 
     void SpawnObject()
     {
-        text.text = "Move your finger and find the object!";
+        text.text = "Move your finger to find the object!";
         float x = Random.Range(-xLimit, xLimit);
         float y = Random.Range(-yLimit, yLimit);
-        objectToFind = Instantiate(trailPrefab, new Vector3(x, y, 0), Quaternion.identity);
+        objectToFind = Instantiate(objectPrefab, new Vector3(x, y, 0), Quaternion.identity);
+        objectFound = false;
     }
 }
