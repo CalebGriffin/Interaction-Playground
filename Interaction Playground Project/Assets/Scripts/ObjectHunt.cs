@@ -36,6 +36,8 @@ public class ObjectHunt : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI debugText;
 
+    Accelerometer accelerometer;
+
     void Awake()
     {
         inputManager = InputManager.Instance;
@@ -103,12 +105,12 @@ public class ObjectHunt : MonoBehaviour
             ObjectFound();
         }
 
-        if (InputManager.AccelerometerValue.sqrMagnitude > shakeThreshold && objectFound)
+        if (InputManager.AccelerometerValue.magnitude > shakeThreshold && objectFound)
         {
             SpawnObject();
         }
 
-        debugText.text = InputManager.AccelerometerValue.ToString() + " " + InputManager.AccelerometerValue.sqrMagnitude.ToString();
+        debugText.text = InputManager.AccelerometerValue.ToString() + " " + InputManager.AccelerometerValue.magnitude.ToString();
     }
 
     void UpdateTrailPos()
